@@ -1,0 +1,33 @@
+a:hover {
+	color: black;
+}
+
+body {
+	font-family: verdana, times, serif;
+	background-color: #FFF;
+    padding-top: 90px;
+    background-image: url(../img/concrete_seamless.png);
+    /*background-image: url(../img/textured_paper.png);*/
+}
+
+p {
+	padding-top: 15px;
+}
+
+ section h2 {
+	font-size: 1.4em;
+	margin: 10 0 1em;
+	color: #BC1B39;
+	font-weight: 400;
+}
+
+  .name {
+  	font-weight: 600;
+}
+  .keywords {
+  	font-weight: 300;
+}
+
+h3.name {
+	font-size: 1.17em;
+}

@@ -1,0 +1,39 @@
+body {
+	background-color: papayawhip;
+}
+h1 {
+	font-family: Monospace, Times New Roman, serif;
+}
+nav {
+	font-family: Monospace;
+}
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+nav li {
+	display: inline;
+	float: left;
+}
+nav a {
+	display: block;
+	width: 90px;
+	background-color: white; 
+	border: 1px solid white;
+	border-radius: 50px;
+}
+nav a:link {
+	color: black;
+}
+
+nav a:visited {
+	color: black;
+}
+nav a:hover {
+	color: white;
+}
+nav a:active {
+	color: black;
+}
+

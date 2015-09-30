@@ -1,0 +1,36 @@
+h2 {
+	text-decoration: underline;
+}
+
+div {
+	width: 600px;
+	height: 300px;
+}
+
+.Libya {
+	background-color: green;
+}
+
+.FranceLeft {
+	background-color: navy;
+	width: 33%;
+}
+.FranceRight {
+	background-color: red;
+	width: 33%;
+	position: relative;
+	left: 400px;
+	bottom: 303px;
+}
+
+.Japan {
+	@extend %flag;
+  background: radial-gradient(circle at 50% 50%, red 0%,  red 30%, white 30%, white 100%);
+}
+
+.Greece {
+background-image: url(http://fonts.googleapis.com/css?family=Poiret+One);
+background-color: white;
+  background-image: linear-gradient(to bottom, $hellenic-blue 11.11%, white 11.11%, white 22.22%, $hellenic-blue 22.22%, $hellenic-blue 33.33%, white 33.33%, white 44.44%, $hellenic-blue 44.44%, $hellenic-blue 55.55%, white 55.55%, white 66.66%, $hellenic-blue 66.66%, $hellenic-blue 77.77%, white 77.77%, white 88.88%, $hellenic-blue 88.88%, $hellenic-blue 100%);
+	}
+

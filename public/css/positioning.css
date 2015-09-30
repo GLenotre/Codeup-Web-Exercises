@@ -1,0 +1,55 @@
+
+h2 {
+	text-decoration: underline;
+	margin-bottom: 50px;
+}
+
+body { border: 1 solid black;
+}
+
+div {
+	width: 50px;
+	height: 50px;
+	padding: 10px; 
+	border: 1px solid black;
+	color: white;
+	margin: 0px 50px 50px 0px;
+	float: left;
+}
+div:nth-child(even) {
+    clear: both;
+}
+img {
+	position: relative;
+	bottom: 80px;
+	left: 40px;
+}
+
+.red {
+	background-color: red;
+}
+.orange {
+	background-color: orange;
+}
+.yellow {
+	background-color: yellow;
+	clear: both;
+}
+.green {
+	background-color: green;
+}
+.blue {
+	background-color: blue;
+}
+.purple {
+	background-color: purple;
+}
+
+/*
+No line breaks or paragraphs should be used. Use positioning, floats, and clears as appropriate.
+Each colored box as a 1 pixel border.
+The content area of each box is 50 pixels wide by 50 pixels high.
+The overall size of each box is 72 pixels wide by 72 pixels high.
+There is 50 pixels of space between the header and the boxes.
+There is 50 pixels of space between the boxes themselves.
+The Codeup arrow has been added to each box (download image below).*/
