@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<title>User Interaction</title>
+</head>
+<body>
+	<script>
+"strict use";
+
+var random = Math.round((Math.random()*4)+1);
+console.log(random);
+
+var guesses = 2
+var guess = prompt('Guess a random number between 1 and 5 in three tries.');
+
+while (random != guess && guesses > 0) {
+ 	
+if (guess > random) {
+	alert('Try a lower number!');
+} else if (guess < random) {
+	alert('Try a higher number!');
+} else if (guess == NaN) {	
+	alert('Try a real number!');
+} 
+	guesses-- ;
+	var guess = prompt('Guess again');
+} 
+
+if (guess == random) {
+	alert('You win!');
+} else {
+	alert('You lose!');
+}
+
+
+// generate a random number
+// have the user guess a number
+// check the user's guess w/ the random
+// if the guess high or low, let them know
+// have the user keep guessing
+
+</script>
+</body>
+</html>

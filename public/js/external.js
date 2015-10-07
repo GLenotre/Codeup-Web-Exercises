@@ -1,18 +1,19 @@
-// "use strict";
-// function doSomething(param1) {
-// 	console.log(param1);
-// }
+"use strict";
 
-// doSomething('Hello World');
+function doSomething(param1) {
+	console.log(param1);
+}
+
+doSomething('Hello World');
 
 
-// function areaofrectangle(length, width) {
-// 	var area = length * width;
-// 	return area;				// once you return it's finished
-// }
+function areaofrectangle(length, width) {
+	var area = length * width;
+	return area;				// once you return it's finished
+}
 
-// areaofrectangle(10, 5);
-// console.log(areaofrectangle);
+areaofrectangle(10, 5);
+console.log(areaofrectangle);
 
 
 function isEven(input) {
