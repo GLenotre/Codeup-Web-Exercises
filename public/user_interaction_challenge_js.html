@@ -6,6 +6,7 @@
 <body>
 	<script>
 "strict use";
+(function () {
 
 var random = Math.round((Math.random()*5)+1);
 console.log(random);
@@ -19,8 +20,6 @@ if (guess > random) {
 	alert('Try a lower number!');
 } else if (guess < random) {
 	alert('Try a higher number!');
-} else if (guess == NaN) {	
-	alert('Try a real number!');
 } 
 	guesses-- ;
 	var guess = prompt('Guess again');
@@ -38,7 +37,7 @@ if (guess == random) {				// confirmed = confirm('Would you like to play again')
 // check the user's guess w/ the random
 // if the guess high or low, let them know
 // have the user keep guessing
-
+})();
 </script>
 </body>
 </html>

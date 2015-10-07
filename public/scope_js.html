@@ -1,0 +1,87 @@
+<head>
+	<title>Functions in JS</title>
+</head>
+<body>
+	<h1>Functions</h1>
+<script>
+"use strict";
+
+(function)({ 
+
+function sayHello(myNameIs) {
+	var myNameIs = 'Gaston'; 
+	return myNameIs;
+}
+	console.log( sayHello() );
+	console.log ('=============');
+
+
+function isOdd(random) {
+	var random = Math.floor((Math.random()*100)+1);
+	var message = (random % 2 !== 0) ? random + " is odd." : random + " is even.";
+	return message;
+}
+	console.log( isOdd() );
+
+console.log ('=============');
+
+function randomNumber(min, max) {
+	return Math.floor((Math.random() * (max - min)) + min + 1);
+}
+
+console.log (randomNumber(5, 20));
+
+console.log ('=============');
+
+
+
+function areaofrectangle (length, width) {
+	var area = length * width;
+	return area;
+}
+console.log (areaofrectangle(15, 8));
+console.log ('=============');
+
+function areaoftriangle (length, width) {
+	var area = (length * width) / 2;
+	return area;
+}
+console.log (areaoftriangle(9, 8));
+console.log ('=============');
+
+
+function areaofcircle (radius) {
+	var area = radius * Math.PI;
+	return area;
+}
+console.log (areaofcircle(3));
+console.log ('=============');
+
+function perimeterofcircle (radius) {
+	var area = 2 * Math.PI * radius;
+	return area;
+}
+console.log (perimeterofcircle(3));
+console.log ('=============');
+
+function areaoftrapezoid (length1, length2, height) {
+	var area = (length1 + length2) / 2 * height;
+	return area;
+}
+console.log (areaoftrapezoid(15, 6, 8));
+console.log ('=============');
+
+
+// function areaofequilateral (side) {
+// 	return Math.sqrt(3)/4 * (Math.pow(side, 2)); 
+// }
+// function areaoftriange (side)
+//     return (Math.sqrt(3)/4*6 (Math.pow(side, 2));
+// }
+
+
+// 2 * 2 square root of 2
+
+ }) ():   
+</script>
+</body>
