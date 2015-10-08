@@ -1,0 +1,45 @@
+<!doctype>
+<html>
+<head>
+	<title>Iterating Arrays</title>
+</head>
+
+<body>
+	<script>
+		"strict use";
+var names = ['vanilla','chocolate','strawberry','coconut']
+console.log(names.length);
+
+for (var i = 0; i < names.length; i+=1) {
+	console.log(names[i]);
+}
+
+names.forEach(function (element, index, array) {
+	console.log("I like " + element + " ice cream flavor.");
+});
+
+// todo:
+// Create an array of 4 names using literal array notation, in a variable called 'names'.
+
+// todo:
+// Create a log statement that will log the number of elements in the names array.
+
+// todo:
+// Create log statements that will print each of the names array elements individually.
+
+var tacos = ['picadillo','lengua','guac']
+tacos.forEach(function(taco, index, array) {
+	if(index>0) {
+		console.log("I like eating " + array[index -1]);
+	}
+	
+	console.log('I am eating a ' + taco + ' taco');
+
+	if(index < array.length -1) {
+		console.log('I will eat a ' + array[index + 1] + ' taco next');
+	}
+	console.log('yum');
+	});
+
+	</script>
+</body>
