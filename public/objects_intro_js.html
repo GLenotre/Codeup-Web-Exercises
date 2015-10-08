@@ -1,0 +1,48 @@
+<head>
+	<title>Objects Intro in JS</title>
+</head>
+<body>
+<script>
+"use strict";
+var student = [{
+	first: "Peter",
+	last: "Pauls",
+	sayHello: function(msg){
+		console.log(this.first + ' ' + this.last);	
+	},								// put commas at the end of each 
+	grades: [
+		100, 100, 100, 100
+	]
+}, {			// comma separates the arrays
+	first: "Jack",
+	last: "Daniels",
+	sayHello: function(msg){
+	console.log(this.first + '' + this.last);	
+	},								// put commas at the end of each 
+	grades: [
+		100, 100, 100, 50
+	]
+}];
+student[0].sayHello();
+
+var person = {};
+person.first = "Mike";
+person.last = "Schmidt";
+
+person.sayHello = function (msg) {
+	console.log(this.first + '' + this.last);
+};
+
+// todo:
+// Create person object with firstName and lastName properties (set to your first and last name).
+// var person = todo;
+
+// todo:
+// Add a say hello method to the person object that alerts hello using the firstName and lastName properties.
+
+// Say hello from the person object.
+// person.sayHello();
+
+</script>
+</body>
+</html>

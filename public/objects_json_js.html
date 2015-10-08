@@ -1,0 +1,70 @@
+<!doctype>
+<html>
+<head>
+	<title>Objects JSON in JS</title>
+</head>
+<body>
+<script>
+
+var books = [{
+	"origin": {
+		lastName: "Aeschylus",
+		civilization: "Ancient Greece"		
+	},
+	title: "The Persians",
+	date: "500 BCE"
+},{
+	"origin": {
+		lastName: "Sophocles",
+		civilization: "Ancient Greece"
+	},
+	title: "Antigone",
+	date: "450 BCE"
+},{
+	"origin": {
+		lastName: "Euripides",
+		civilization: "Ancient Greece"
+	},
+	title: "Orestes",
+	date: "440 BCE"
+},{
+	origin: {
+	lastName: "Vergil",
+	civilization: "Ancient Rome"
+	},
+	title: "The Aeneid",
+	date: "19 BCE"
+},{
+	origin: {
+		lastName: "Unknown",
+		civilization: "Old English"
+	},
+	title: "Beowulf",
+	date: "8th century CE"
+}
+];
+
+// todo:
+// Create an array of objects that represent books.
+// Each book should have a title and an author.
+// The book author should be an object with a firstName and lastName.
+// Be creative and add at least 5 books to the array
+// var books = [todo];
+
+// log out the books array
+console.log(books);
+
+// todo:
+// Loop through the array of books using .forEach and print out the specified information about each one.
+// start loop here
+books.forEach(function(book, index) {
+    console.log("Book #" + (index + 1));
+	console.log("Title: " + book.title);
+    console.log("Origin: " + book.origin.lastName + " | " + book.origin.civilization);
+    console.log("Date: " + book.date);
+  });
+ console.log("---"); 
+// end loop here
+</script>
+</body>
+</html>
