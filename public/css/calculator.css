@@ -1,0 +1,40 @@
+h2 {
+    color: white;
+    font-family: Perpetua, Serif;
+}
+body {
+    font-family: verdana, times, serif;
+    background-color: black;
+    padding-top: 90px;
+    background-image: url(../img/escher_ball.gif); 
+    background-size: 285px 407px;   /* original: 1140 x 1630 */
+    background-position: top-right;
+    background-repeat: no-repeat;
+}
+.fields,
+.keypads {
+    float: right;
+}
+.keypads button {
+    width: 73px;
+    height: 30px;
+    float: left;
+}
+.fields {
+    margin: 10px;
+    border: 10px;
+}
+button {
+    float: right;
+    margin: 1px;
+    background-color: transparent;
+    color: #FFFF66;
+    overflow: auto;
+}
+
+input {
+    background-color: transparent;
+    clear: both;
+    color: white;
+    margin: 5px;
+}

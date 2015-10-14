@@ -34,25 +34,28 @@
         "use strict";
         (function() {
             // TODO: Uncomment next line and get the main header element by id
-            var mainHeader = document.getElementById('main-header');
-            var listener = function (event) 
+           
+            var changetitle = function (event) 
             {
+                var mainHeader = document.getElementById('main-header');
                 mainHeader.innerHTML = "Javascript is Cool";    
             }
-            document.getElementById('button1').addEventListener('click', listener, false);
+            document.getElementById('button1').addEventListener('click', changetitle, false);
             
 
-            var subHeader = document.getElementById('sub-header');
-            var listener = function (event) 
+            
+            var changesubheader = function (event) 
             {
+                var subHeader = document.getElementById('sub-header');
                 subHeader.style.color = 'blue';    
             }
-            document.getElementById('button2').addEventListener('click', listener, false);
+            document.getElementById('button2').addEventListener('click', changesubheader, false);
 
 
-            var listItems = document.getElementsByTagName('li');
-            var listener = function (event)
+            
+            var changelistcolors = function (event)
             {
+                var listItems = document.getElementsByTagName('li');
                 for (var i = 0; i < listItems.length; i++){
                     
                     if (i % 2 == 0) {
@@ -63,15 +66,16 @@
                     };
             }
             };
-            document.getElementById('button3').addEventListener('click', listener, false);
+            document.getElementById('button3').addEventListener('click', changelistcolors, false);
 
 
-            var subParagraphs = document.getElementsByClassName('sub-paragraph');
-            var listener = function (event) 
+            
+            var changeparagraphtext = function (event) 
             {    
+                var subParagraphs = document.getElementsByClassName('sub-paragraph');
                 subParagraphs[0].innerHTML = "Mission Accomplished!" ;
             }
-            document.getElementById('button4').addEventListener('click', listener, false);
+            document.getElementById('button4').addEventListener('click', changeparagraphtext, false);
 
 
             var listener = function (event) {
