@@ -1,0 +1,1 @@
+alert('You\'ve uploaded the file!');
