@@ -1,12 +1,9 @@
 "use strict";
 $(document).ready(function() {
-	// $('ul').addClass('invisible');	
-$('*').hover(function(e) {
-
-	e.preventDefault();
-	$('*').css('color','red');
-},
-	function(e) {
-	$('*').css('color','black');
-	 });
+$('#French').children().first().css('font-weight','bold');
+$('#Japanese').children().first().css('font-weight','bold');
+$('#Texas').children().first().css('font-weight','bold');
 });
+
+
+ $('.important').addClass('highlighted');
