@@ -1,84 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Animate</title>
-    <style>
+    <meta charset="UTF-8">
+    <title>Animate</title>    
+</head>
+<style>
         html, body {
             margin: 0px;
             padding: 0;
         }
 
         #btn-animate {
-            margin: 15px;
+            margin: 5px;
         }
 
         #animate-box {
-            background-color: black;
-            height: 250px;
-            margin: 15px;
-            position: relative;
-            width: 250px;
+            background-color: navy;
+            height: 50px;
+            margin: 0px;
+            position: absolute;
+            width: 50px;
+            border-radius: 100px;
+        }
+
+        #moving-box {
+            background-color: orange;
+            height: 50px;
+            margin-left: 150px;
+            position: absolute;
+            width: 50px;
+            border-radius: 100px;   
         }
 
     </style>
-</head>
 <body>
     <p>
-        <button id="btn-move">Move</button>
-        <button id="btn-hide">Hide</button>
-        <button id="btn-show">Show</button>
-        <button id="btn-color">Color</button>
-        <button id="btn-all">Animate All</button>
+        <div>
+            <button id="btn-move-left">Left</button>
+            <button id="btn-move-right">Right</button>
+        </div>
+        <div>
+            <button id="btn-move-top">Top</button>
+            <button id="btn-move-down">Down</button>
+        </div>
+        <div>
+            <button id="btn-hide">Hide</button>
+            <button id="btn-show">Show</button>
+        </div>
     </p>
 
     <div id="animate-box"></div>
+    <div id="moving-box"></div>
 
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script>
     $(document).ready(function() {
         "use strict";
-        // TODO: "Move It" should move the box 100 pixels to the left
 
-             $('#btn-move').click(function() {
+             $('#btn-move-right').click(function() {
                 $('#animate-box').animate({
-                    left: "+=100px"
-            }, 1000);
+                    left: "+=30px"
+            }, 250);
             });
-        // TODO: "Scale It" should expand the box width by 50%
-            // $('#btn-scale').click(function() {
-            //     $('#animate-box').toggle
-            // });
-        // TODO: "Hide It" should use opacity to make the box invisible
+
+             $('#btn-move-left').click(function() {
+                $('#animate-box').animate({
+                    left: "-=30px"
+            }, 250);
+            });
+
+            $('#btn-move-top').click(function() {
+                $('#animate-box').animate({
+                    top: "-=30px"
+            }, 250);
+            });
+
+            $('#btn-move-down').click(function() {
+                $('#animate-box').animate({
+                    top: "+=30px"
+            }, 250);
+            });            
+
             $('#btn-hide').click(function(){
                 $('#animate-box').animate({
                     opacity: 0.00
                 });
             });
 
-        // TODO: "Show It" should make the box appear
             $('#btn-show').click(function(){
                 $('#animate-box').animate({
                     opacity: 1.00
                 })
             })
-        // TODO: "Animate All" should use an animation stack to:
-            $('#btn-all').click(function(){
-                $('#animate-box').animate({
-                    left: "+=100px"
-                }, 1000).animate({
-                    opacity: 0
-                }, 1000, function(){
 
-                });
-            });
-        //      1) Move and scale the box simultaneously
-        //      2) Hide the box
-        //      3) Reset the box back to its original position and opacity
-            $('btn-all').click(function(){
-                $('#animate-box').animate({
-                    
-                }, 1000);
-            })
+        //     function moving (){
+        //         $('#moving-box').animate({
+        //             height: Math.floor(Math.random()* 100) + '%'), 350;
+        //     }
+
+        //     setInterval(animate, 350);
+        // })
+                
     });
     </script>
 </body>
