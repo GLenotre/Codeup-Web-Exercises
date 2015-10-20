@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>Online Store</title>
 
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+
+    <style>
+    body {
+            background-image: url(../img/fabric_of_squares_gray.png);
+            font-family: serif, Palatino;
+            color: #542a0c;;
+        }
+    </style>
 </head>
 <body>
 
-<h1>My Tool Store</h1>
+<h1>My Chocolate Tool Store</h1>
 <button id="refresh">Refresh</button>
 <table id="products" class="table table-bordered">
         <tr>
@@ -23,37 +32,39 @@
 <script src="/js/bootstrap.js"></script>
 
 <script>
-(function() {
-    // TODO: Create an ajax GET request for /data/inventory.json
-$.get("/data/inventory.json").done(function(data) {
-    data.forEach(function (tool, index) {
-        var stuff = "<tr>";
-        stuff += "<td>" + tool.title + "</td>";
-        stuff += "<td>" + tool.quantity + "</td>";
-        stuff += "<td>" + tool.price + "</td>";
-        stuff += "<td>";
-        tool.categories.forEach(function(category, index){
-            stuff += " " + category;
+    (function() {
+        // TODO: Create an ajax GET request for /data/inventory.json
+        function refresh () {
+            $.ajax("/data/inventory.json").done(function(data) {
+                data.forEach(function (tool, index) {
+                    var stuff = "<tr>";
+                    stuff += "<td>" + tool.title + "</td>";
+                    stuff += "<td>" + tool.quantity + "</td>";
+                    stuff += "<td>" + tool.price + "</td>";
+                    stuff += "<td>";
+                    tool.categories.forEach(function(category, index){
+                        stuff += " " + category;
+                    });
+                    stuff += "</td>";
+                    stuff += "</tr>";    
+                $('#insertProducts').append(stuff);
+                });
+            // ends ajax
+            }); 
+
+        // ends refresh
+        }
+        $('#refresh').click(function(event) {
+            $('#insertProducts').html("");
+            refresh();
+        //ends ajax
         });
-        stuff += "</td>";
-        stuff += "</tr>";    
-    $('#insertProducts').append(stuff);
-    });
-// ends get
-}); 
 
-$('#refresh').click(function() {
-    .get("/data/inventory.json").done(function(data){
-//ends get
-});
+        refresh();
 
 
-// ends iffe
-})();
-    // TODO: Take the data from inventory.json and append it to the products table
-    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
-    //             its contents and fields
-    //       HINT: You will want to target #insertProducts for your new HTML elements
+    // ends iffe
+    })();
 
 </script>
 

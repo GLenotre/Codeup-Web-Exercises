@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store Blog</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <style>
+    	body {
+    		background-image: url(../img/fabric_of_squares_gray.png);
+ 			font-family: serif, Palatino;
+ 			color: #542a0c;
+    	}
+    	img.displayed {
+    		display: block;
+    		margin-left: auto;
+    		margin-right: auto;
+    	}
+    	p {
+	    	font-family: cursive, Florence;
+	    	text-align: center;
+    	}
+
+    </style>
+</head>
+<body>
+	<h2>Welcome to Blog Chocolat </h2>
+	<h3>Feel free to browse around and post a comment</h3>
+	<div id="posts">
+
+	</div>
+
+	<script src="/js/jquery-1.11.3.min.js"></script>
+	<script src="/js/bootstrap.js"></script> 
+
+	<script>
+	(function() {
+		$.get("/data/blog.json").done(function(data) {
+			data.forEach(function (section, index, array) {
+				var words = "<p>";
+				words += "<h4>" + section.title + "</h4>";
+				words += "<p>" + section.content + "</p>";
+				words += "<h6><em>" + section.date + "</p></em></h6>";
+				words += "<h6><strong>" + "keywords: " + section.categories.join(', ') + "</strong></p>";
+				words += "</h6>";
+				$('#posts').append(words);
+			});
+		});	
+	})();
+	</script>
+</body>
+</html>
